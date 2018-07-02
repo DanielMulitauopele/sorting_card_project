@@ -1,5 +1,3 @@
-#Verify that origin is working?
-
 class Card
   def initialize(value, suit)
     @value = value
@@ -14,7 +12,3 @@ class Card
     @suit
   end
 end
-
-card = Card.new("King", "Hearts")
-
-p card.value
