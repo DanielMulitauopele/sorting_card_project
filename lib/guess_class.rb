@@ -42,9 +42,3 @@ class Guess
     end
   end
 end
-
-
-card = Card.new("10", "Hearts")
-guess = Guess.new("10 of Hearts", card)
-
-print guess.feedback
