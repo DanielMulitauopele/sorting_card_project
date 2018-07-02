@@ -14,12 +14,6 @@ class Guess
     @response
   end
 
-  def correct?
-    if guess.card_details == guess.response_details
-      trueg
-    end
-  end
-
   def card_details
     card_deets = []
     card_deets << card.value
@@ -32,11 +26,19 @@ class Guess
     response_deets << response.split[-1]
   end
 
-  def feedback
-    if guess.correct? == true
-      print "Correct!"
+  def correct?
+    if card_details == response_details
+      true
     else
-      print "Incorrect."
+      false
+    end
+  end
+
+  def feedback
+    if correct? == true
+      "Correct!"
+    else
+      "Incorrect."
     end
   end
 end
@@ -45,4 +47,4 @@ end
 card = Card.new("10", "Hearts")
 guess = Guess.new("10 of Hearts", card)
 
-p guess.correct?
+print guess.feedback
