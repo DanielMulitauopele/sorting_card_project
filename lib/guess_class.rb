@@ -1,4 +1,4 @@
-require './card_class.rb'
+require './lib/card_class.rb'
 
 class Guess
   def initialize(response, card)

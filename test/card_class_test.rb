@@ -1,4 +1,4 @@
-require '../lib/card_class.rb'
+require './lib/card_class.rb'
 require 'minitest/autorun'
 require 'minitest/pride'
 
