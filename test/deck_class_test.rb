@@ -7,7 +7,7 @@ class DeckTest < Minitest::Test
     card_1 = Card.new("10", "Hearts")
     card_2 = Card.new("3", "Spades")
     card_3 = Card.new("Jack", "Hearts")
-    deck = Deck.new(card_1, card_2, card_3)
+    deck = Deck.new([card_1, card_2, card_3])
     expected = [card_1, card_2, card_3]
     actual = deck.cards
 
@@ -18,7 +18,7 @@ class DeckTest < Minitest::Test
     card_1 = Card.new("10", "Hearts")
     card_2 = Card.new("3", "Spades")
     card_3 = Card.new("Jack", "Hearts")
-    deck = Deck.new(card_1, card_2, card_3)
+    deck = Deck.new([card_1, card_2, card_3])
     expected = 3
     actual = deck.count
 
