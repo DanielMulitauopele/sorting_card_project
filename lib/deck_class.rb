@@ -15,11 +15,3 @@ class Deck
     cards.count
   end
 end
-
-card_1 = Card.new("3", "Hearts")
-card_2 = Card.new("4", "Clubs")
-card_3 = Card.new("5", "Diamonds")
-
-deck = Deck.new(card_1, card_2, card_3)
-
-p deck.cards

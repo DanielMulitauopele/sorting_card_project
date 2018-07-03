@@ -2,7 +2,7 @@ require './lib/guess_class.rb'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class CardTest < Minitest::Test
+class GuessTest < Minitest::Test
   def test_what_is_the_card
     card = Card.new("10", "Hearts")
     guess = Guess.new("10 of Hearts", card)
