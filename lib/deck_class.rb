@@ -1,17 +1,16 @@
 require './lib/card_class.rb'
+require './lib/guess_class.rb'
 
 class Deck
-  def initialize(card_1, card_2, card_3)
-    @card_1 = card_1
-    @card_2 = card_2
-    @card_3 = card_3
+  def initialize(deck)
+    @deck = deck
   end
 
   def cards
-    cards = [@card_1, @card_2, @card_3]
+    @deck
   end
 
   def count
-    cards.count
+    @deck.count
   end
 end
