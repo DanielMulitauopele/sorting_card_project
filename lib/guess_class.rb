@@ -1,4 +1,4 @@
-require './card_class.rb'
+require './lib/card_class.rb'
 
 class Guess
   def initialize(response, card)
@@ -42,9 +42,3 @@ class Guess
     end
   end
 end
-
-
-card = Card.new("10", "Hearts")
-guess = Guess.new("10 of Hearts", card)
-
-print guess.feedback
