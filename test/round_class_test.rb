@@ -68,32 +68,30 @@ class RoundTest < Minitest::Test
   end
 
   def test_what_is_the_number_correct?
-    skip
     card_1 = Card.new("3","Hearts")
     card_2 = Card.new("4", "Clubs")
     card_3 = Card.new("Jack", "Diamonds")
     deck = Deck.new([card_1, card_2, card_3])
     round = Round.new(deck)
 
-    # Something goes here that shows that two guesses would match two of the cards that have been created
-
-    expected = 2
+    expected = 0
     actual = round.number_correct
 
     assert_equal expected, actual
   end
 
   def test_what_is_the_percent_correct?
-    skip
     card_1 = Card.new("3","Hearts")
     card_2 = Card.new("4", "Clubs")
     card_3 = Card.new("Jack", "Diamonds")
     deck = Deck.new([card_1, card_2, card_3])
     round = Round.new(deck)
 
-    #Something goes here that shows the number of recorded guesses divided by the number of cards
+    guess_1 = round.record_guess({value: "3", suit: "Hearts"})
+    guess_2 = round.record_guess({value: "9", suit: "Clubs"})
+    guess_3 = round.record_guess({value: "Jack", suit: "Diamonds"})
 
-    expected = 66.6
+    expected = 66.7
     actual = round.percent_correct
 
     assert_equal expected, actual
