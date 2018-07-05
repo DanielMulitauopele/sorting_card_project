@@ -17,16 +17,24 @@ class Deck
   def sort(deck)
     card_array = deck.cards
 
-      loop deck.cards.index do |index|
-        swap = false
-          if card_array[index].value > card_array[index + 1].value
-            card_array[index], card_array[index + 1] = card_array[index + 1], card_array[index]
+    loop do
+      swap = false
 
-            swap = true
-          end
-        end
+      (card_array - 1).times do |card|
+      if card_array[card].card_value > card_array[card + 1].card_value 
+        card_array[card], card_array[card + 1] = card_array[card + 1], card_array[card]
+
+        swap = true
       end
+    end
 
+    break if not swapped
+
+
+    return card_array
+
+    end
+  end
 end
 
 card_1 = Card.new("4","Hearts")
