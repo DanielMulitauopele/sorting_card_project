@@ -36,7 +36,7 @@ class DeckTest < Minitest::Test
     deck = Deck.new([card_1, card_2, card_3, card_4, card_5])
 
     expected = [card_1, card_3, card_2, card_5, card_4]
-    actual = deck.sort
+    actual = deck.sort(deck)
 
     assert_equal expected, actual
   end
