@@ -73,10 +73,11 @@ class RoundTest < Minitest::Test
     card_3 = Card.new("Jack", "Diamonds")
     deck = Deck.new([card_1, card_2, card_3])
     round = Round.new(deck)
+    guess_1 = round.record_guess({value: "3", suit: "Hearts"})
 
-    expected = 0
+
+    expected = 1
     actual = round.number_correct
-
     assert_equal expected, actual
   end
 
